@@ -714,7 +714,6 @@ app.get('/upload-blog',requireauthblog, (req, res) => {
 
 });
 
-
 // end for blog
 app.get('/logout', (req, res) => {
     // Destroy the session

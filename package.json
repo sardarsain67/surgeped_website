@@ -24,6 +24,7 @@
     "passport": "^0.6.0",
     "path": "^0.12.7",
     "quill-delta-to-html": "^0.12.1",
+    "surgeped-web": "file:",
     "swiper": "^9.0.5",
     "uuid": "^9.0.0",
     "xlsx": "^0.18.5"
