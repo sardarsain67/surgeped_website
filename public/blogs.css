@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.hero-blog{
+    font-family: 'Montserrat', sans-serif;
+
+    background: url("./imgblogs/pexels-3389955.webp") center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero-blog-content{
+    font-family: 'Montserrat', sans-serif;
+
+    position: absolute;
+    color: white;
+    top: 34%;
+    left: 9%;
+    max-width: 40%;
+}
+
+.hero-blog-content h1{
+    font-size: 3.5rem;
+}
+
+
+.hero-blog-content p{
+    font-size: 12px;
+}
+
+
+.hero-read-more{
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.read-more-light{
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: white;
+    background: none;
+    border: 1px solid white;
+    padding: .6rem;
+    border-radius: 20px;
+}
+
+.blog-page-categories{
+    padding: 2rem;
+}
+
+.heading-categories{
+    font-family: 'Montserrat', sans-serif;
+
+    margin-bottom: 2rem;
+}
+
+.category-item{
+    font-family: 'Montserrat', sans-serif;
+
+
+
+    transition: opacity 1s ease-in-out;
+    width: 12rem;
+}
+
+.blog-page-categories .category-list{
+    font-family: 'Montserrat', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 10%;
+
+}
+
+.category-list .category-item{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 2rem;
+}
+
+
+.view-all-categories{
+    border: none;
+    font-weight: bold;
+    border: 1px solid green;
+    border-radius: 20px;
+    padding: .2rem .5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    cursor: pointer;
+}
+.category-list .category-item div{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.category-list .category-item img{
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.category-list .category-item h2{
+    font-size: 1rem;
+}
+
+
+/*blogs section*/
+
+
+.blog-page-blog-container {
+    font-family: 'Montserrat', sans-serif;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 2rem;
+}
+
+.blog:first-child{
+    grid-column: 1 / span 2;
+
+}
+
+.blog:nth-child(4) {
+    grid-column: 1 / span 3;
+}
+
+
+.blog:nth-child(7) {
+    grid-column: 2 / span 3;
+}
+.blog {
+    position: relative;
+}
+
+.blog-cover-image {
+    width: 100%;
+    height: 80vh;
+    /*used for responsiveness  padding-bottom: 66.67%;*/
+    background-size: cover;
+    background-position: center;
+}
+
+.blog-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+    opacity: .8;
+    transition: opacity 0.5s ease-in-out;
+
+
+}
+
+.blog-overlay:hover{
+    opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;}
+
+.blog-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.blog-description {
+    font-size: 16px;
+    margin: 10px 0;
+    height: 2.4rem;
+    overflow: hidden;
+}
+
+.blog-description-div{
+    height: 3rem;
+    overflow: hidden;
+}
+
+.blog-date {
+    font-size: 14px;
+    margin: 0;
+    align-self: flex-end;
+}
+
+.coming-soon-blogs-head{
+    text-align: center;
+}
+
+#typing-text1 {
+    padding: 4rem 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    border: 0.15em solid green;
+    border-radius: 10px;
+    /*border-left: 0.15em solid #333;*/
+}
+
+
+
+#shooting-star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    animation-name: shooting-star;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+    z-index: 2;
+    transition: top,left 0.3s ease-in-out;
+
+}
+
+@keyframes shooting-star {
+    from {
+        transform: rotate(0deg) translateX(50px);
+    }
+    to {
+        transform: rotate(360deg) translateX(50px);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero-blog-content {
+        max-width: 60%;
+        color: white;
+        top: 10%;
+
+    }
+
+
+
+}

@@ -1,0 +1,555 @@
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .contain-test {
+    font-family: "Poppins", sans-serif;
+    /*background: #e3ebea;*/
+    background: #f6f9f9;
+    text-align: center;
+    padding: 4rem;
+    margin-top: 2rem;
+    overflow: hidden;
+    height: 80vh;
+  }
+
+  .contain-test h1 {
+    margin-bottom: 5rem;
+  }
+
+  .testimonial-comp {
+    height: 80vh;
+    /*background: #e3ebea;*/
+    background: #f6f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+  }
+
+  .card-img-container {
+    width: 6rem;
+    height: 6rem;
+    overflow: hidden;
+    transform: rotate(-10deg);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    flex-shrink: 0;
+    border: 4px solid white;
+  }
+  .person-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .card-main {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    max-width: 30rem;
+    gap: 2rem;
+
+    border-radius: 20px;
+    padding: 2rem;
+    z-index: 4;
+    position: relative;
+  }
+
+  .card-text-container {
+    color: gray;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.7rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .owner-info {
+    font-weight: bold;
+    z-index: 4;
+    position: relative;
+  }
+  .owner-info p {
+    color: gray;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .org-img {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 10rem;
+    height: 3.8rem;
+    margin: auto;
+  }
+
+  .org-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .testimonial-specific {
+    padding: 1rem;
+    border-radius: 20px;
+    height: 85vh;
+    margin-top: -2rem;
+    margin-left: -1rem;
+    width: 41vw;
+    position: relative;
+  }
+
+  .testimonial-specific::before,
+  .testimonial-specific::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    /*background-color: red;*/
+    background-color: #6ad315;
+    animation: move 2s infinite linear;
+    z-index: 2;
+  }
+
+  .testimonial-specific::before {
+    left: -5px;
+  }
+
+  .testimonial-specific::after {
+    right: -5px;
+  }
+  .orbit {
+    position: absolute;
+    /*border: 4px solid bisque;*/
+    border: 4px solid #39bd00;
+    width: 25rem;
+    height: 25rem;
+    top: -3rem;
+    left: 20%;
+    /* transform: translateX(-50%); */
+    border-radius: 50%;
+    animation: spin 2s infinite;
+    z-index: 0;
+  }
+  .ball {
+    width: 2rem;
+    height: 2rem;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .ball1 {
+    left: 0;
+    top: 0;
+  }
+
+  .ball2 {
+    right: 0;
+    bottom: 0;
+  }
+  .test-scroll {
+    position: relative;
+    display: flex;
+    transform: translateX(-35vw);
+    width: 550vw;
+    justify-content: space-around;
+    z-index: 4;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .btn-group {
+    position: absolute;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btn-group button {
+    padding: 2rem;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 6;
+    cursor: pointer;
+    margin-top: -2rem;
+  }
+
+  .btn-right-test {
+    margin-right: 0;
+  }
+
+  .orbit:before {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 1rem;
+    left: 1rem;
+    /*background-color: #33343E;*/
+    border-radius: 50%;
+    background-color: transparent;
+    border: 4px solid #39bd00;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+  @keyframes move {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(200px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .contain-test {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+    }
+    .card-main {
+      flex-direction: column;
+    }
+    .btn-group button {
+      padding: 0.8rem;
+    }
+
+    .testimonial-comp {
+      height: 60vh;
+      width: 100%;
+    }
+
+    .testimonial-specific {
+      margin-top: -4rem;
+    }
+    .contain-test h1 {
+      position: relative;
+      margin-bottom: 0;
+      z-index: 4;
+    }
+    .btn-group {
+      width: 100%;
+      opacity: 0.4;
+      z-index: 10;
+    }
+    .card-text-container {
+      max-width: 70%;
+    }
+    .contain-test {
+      padding: 2rem;
+    }
+    .card-img-container {
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-specific:before,
+    .testimonial-specific:after {
+      display: none;
+    }
+  }
+
+  @media screen and (min-device-width: 390px) and (max-device-width: 768px) {
+    .testimonial-specific {
+      padding: 1rem;
+      border-radius: 20px;
+      height: 55vh;
+      margin-top: -2rem;
+      margin-left: -1rem;
+      width: 41vw;
+      position: relative;
+    }
+
+    .testimonial-specific::before,
+    .testimonial-specific::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      /*background-color: red;*/
+      background-color: #6ad315;
+      animation: move 2s infinite linear;
+      z-index: 2;
+    }
+
+    .testimonial-specific::before {
+      left: -5px;
+    }
+
+    .testimonial-specific::after {
+      right: -5px;
+    }
+    .testimonial-comp {
+      height: 55vh;
+    }
+  }
+
+  @media only screen and (max-width: 430px) {
+    .testimonial-specific {
+      padding: 1rem;
+      border-radius: 20px;
+      height: 55vh;
+      margin-top: -2rem;
+      margin-left: -1rem;
+      width: 41vw;
+      position: relative;
+    }
+
+    .testimonial-specific::before,
+    .testimonial-specific::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      /*background-color: red;*/
+      background-color: #6ad315;
+      animation: move 2s infinite linear;
+      z-index: 2;
+    }
+
+    .testimonial-specific::before {
+      left: -5px;
+    }
+
+    .testimonial-specific::after {
+      right: -5px;
+    }
+    .testimonial-comp {
+      height: 55vh;
+    }
+  }
+</style>
+
+<div class="contain-test">
+  <h1>Testimonial</h1>
+  <section class="testimonial-comp">
+    <div class="btn-group">
+      <button class="btn-left-test" id="btn-left-test"><</button>
+      <button class="btn-right-test" id="btn-right-test">></button>
+    </div>
+
+    <div class="testimonial-specific">
+      <div class="test-scroll">
+        <div class="test-part">
+          <div class="card-main">
+            <div class="card-img-container">
+              <img
+                src="./img/govindji-.webp"
+                loading="lazy"
+                class="person-img"
+                alt="person"
+                srcset=""
+              />
+            </div>
+
+            <div class="card-text-container">
+              <p>
+                "Surgeped helped increase my online visibility and sales. Their
+                team is professional and knowledgeable, making the process easy
+                and efficient." ~ Mr. Govind Garg
+              </p>
+            </div>
+
+            <div class="owner-info">
+              <p>Owner at:</p>
+              <div class="org-img">
+                <img src="./img/logos/ogi-kia.webp" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="test-part">
+          <div class="card-main">
+            <div class="card-img-container">
+              <img
+                src="./img/Akshay Panse.webp"
+                loading="lazy"
+                class="person-img"
+                alt="person"
+                srcset=""
+              />
+            </div>
+            <div class="card-text-container">
+              <p>
+                "I am incredibly impressed with the results that this has helped
+                me achieve through their SEO-focused blogs. Their team is highly
+                professional and always willing to go the extra mile to ensure
+                my satisfaction. Thank you for all your hard work!" ~ Akshay
+                Panse
+              </p>
+            </div>
+          </div>
+          <div class="owner-info">
+            <p>Owner at:</p>
+            <div class="org-img">
+              <img
+                src="./img/logos/Cloobot-Logo-higher-res-logo.webp"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="test-part">
+          <div class="card-main">
+            <div class="card-img-container">
+              <img
+                src="./img/Prithvish Bhatia .webp"
+                loading="lazy"
+                class="person-img"
+                alt="person"
+                srcset=""
+              />
+            </div>
+            <div class="card-text-container">
+              <p>
+                "Working with this organization on social media and advertising
+                has been a game changer for my business. Their expertise and
+                strategic approach have helped me reach a wider audience and
+                increase engagement with my brand." ~ Prithvish Bhatia
+              </p>
+            </div>
+          </div>
+          <div class="owner-info">
+            <p>Owner at:</p>
+            <div class="org-img">
+              <img src="./img/logos/Cafeatepmlgo.webp" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+        <div class="test-part">
+          <div class="card-main">
+            <div class="card-img-container">
+              <img
+                src="./img/Ananyay Dhawan.webp"
+                loading="lazy"
+                class="person-img"
+                alt="person"
+                srcset=""
+              />
+            </div>
+            <div class="card-text-container">
+              <p>
+                "I am beyond grateful for the exceptional work this organization
+                has done on my website development and PPC campaigns. They took
+                the time to understand my business and goals, and delivered a
+                stunning website that perfectly showcases my brand." ~ Ananyay
+                Dhawan
+              </p>
+            </div>
+          </div>
+          <div class="owner-info">
+            <p>Owner at:</p>
+            <div class="org-img">
+              <img src="./img/logos/shriji logo1.webp" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+        <div class="test-part">
+          <div class="card-main">
+            <div class="card-img-container">
+              <img
+                src="./img/Shreyansh-Shah.webp"
+                loading="lazy"
+                class="person-img"
+                alt="person"
+                srcset=""
+              />
+            </div>
+            <div class="card-text-container">
+              <p>
+                "They consistently deliver high-quality and engaging content
+                that perfectly aligns with my brand's tone and message. Their
+                team is a pleasure to work with, always responsive and
+                accommodating. I highly recommend their services to anyone in
+                need of top-notch content." ~ Shreyansh Shah
+              </p>
+            </div>
+          </div>
+          <div class="owner-info">
+            <p>Owner at:</p>
+            <div class="org-img">
+              <img src="./img/logos/ccb.webp" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="orbit">
+        <div class="ball ball1"></div>
+        <div class="ball ball2"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  let btnleft = document.getElementById("btn-left-test");
+  let btnright = document.getElementById("btn-right-test");
+  let testscroll = document.getElementsByClassName("test-scroll")[0];
+  let scrollvalue = -35;
+  let numberofelements = 5;
+  let clicknumber = 0;
+  let stepvalue = 110;
+  let current = scrollvalue;
+
+  //console.log(btnright)
+  //console.log(btnleft)
+  //console.log(testscroll)
+
+  btnleft.addEventListener("click", () => {
+    if (clicknumber <= 1) {
+      console.log(scrollvalue - stepvalue * (numberofelements - 1));
+      testscroll.style.transform = `translateX(${(current =
+        scrollvalue - stepvalue * (numberofelements - 1))}vw)`;
+      clicknumber = 5;
+    } else {
+      testscroll.style.transform = `translateX(${(current += stepvalue)}vw)`;
+      clicknumber--;
+    }
+    //console.log(clicknumber)
+  });
+
+  btnright.addEventListener("click", () => {
+    console.log("clicked right");
+
+    if (clicknumber >= 4) {
+      //console.log(scrollvalue - (stepvalue * (numberofelements-1)))
+      testscroll.style.transform = `translateX(${(current = scrollvalue)}vw)`;
+      clicknumber = 0;
+    } else {
+      testscroll.style.transform = `translateX(${(current -= stepvalue)}vw)`;
+      clicknumber++;
+    }
+    //console.log(clicknumber)
+  });
+</script>

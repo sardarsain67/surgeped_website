@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+body{
+    /*background: url("./imgblogs/pexels-dominika-mazur-14446665.jpg") no-repeat;*/
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+
+
+
+}
+
+.blog-container{
+    background-color: white;
+    width: 80%;
+    margin: 5% auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    /* hide scrollbar */
+
+}
+
+
+/*div scroll*/
+
+
+
+.blog-text-content{
+    padding: 1rem 4rem 4rem 4rem;
+}
+
+
+.blog-container h2{
+    font-size: 3rem;
+}
+.blog-text-content-date{
+    margin: 1rem auto;
+    font-size: .8rem;
+    color: gray;
+}
+
+.blog-blog-body{
+    font-weight: 500;
+    font-size: 1rem;
+    word-spacing: 4px;
+}
+
+
+.blog-container .blog-img{
+    background: url("./imgblogs/pexels-dominika-mazur-14446665.jpg") no-repeat;
+    height: 40%;
+    background-size: cover;
+    background-position: 0rem -8rem;
+    margin-bottom: 4rem;
+
+}
+
+
+
+.blog-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -200%; /*50%*/
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    transition: transform 1s ease-out;
+    transform: skewX(-20deg);
+}
+
+.blog-img:hover::after {
+    transform: translateX(100%);
+}

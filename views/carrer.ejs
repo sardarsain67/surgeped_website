@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <title>Career</title>
+    <link rel="stylesheet" href="./carrer.css">
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="img/logos/asd.webp">
+
+
+    <!--
+    <script
+
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+    </script>
+    <script> 
+        $(function(){
+          //$("#header").load("header.html"); 
+          $("#footer").load("footer.html"); 
+        });
+        </script>
+
+        -->
+    <style>
+        /* toggle in label designing */
+        .toggle {
+            position: relative;
+            display: inline-block;
+            width: 205px;
+            height: 40px;
+            background-color: green;
+            border-radius: 30px;
+            border: 2px solid gray;
+            margin-top: 10%;
+        }
+
+        /* After slide changes */
+        .toggle:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 40px;
+            border-radius: 30px;
+            background-color: grey;
+            opacity: 1;
+            top: 1px;
+            left: 1px;
+            transition: all 0.5s;
+        }
+
+
+        /* Toggle text */
+        .jobp {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: white;
+            padding-left: 13%;
+            padding-top: 5%;
+
+
+        }
+
+        /* Checkbox checked effect */
+        .checkbox:checked+.toggle::after {
+            left: 100px;
+        }
+
+        /* Checkbox checked toggle label bg color */
+        .checkbox:checked+.toggle {
+            background-color: green;
+        }
+
+        /* Checkbox vanished */
+        .checkbox {
+            display: none;
+        }
+
+        .spach {
+            width: 5%;
+        }
+
+        .AwesomeDecoration{
+            text-decoration: underline;
+            color: darkgreen;
+            font-weight: bold;
+        }
+
+        .chome p{
+            max-width: 80%;
+        }
+
+
+        @media(max-width: 768px){
+            .jobspac{
+                gap: 2rem;
+            }
+
+            .jobspac1{
+                height: unset;
+            }
+            /*.jobspac1:nth-child(1) img{
+                order: 2;
+            }*/
+            .jobspac1 img{
+                width: 90%;
+            }
+
+            .jobspac1 video{
+                width: 90%;
+            }
+            .jobspac1:nth-child(1) video{
+                order: 2;
+            }
+            .jobspac1:nth-child(1) .jobspac11{
+                order: 1;
+            }
+
+
+            .jobspac1:nth-child(2) video{
+                order: 2;
+            }
+            .jobspac1:nth-child(2) .jobspac11{
+                order: 1;
+            }
+            .jobspac1:nth-child(3) .jobspac11{
+                order: 1;
+            }
+
+            .jobspac1:nth-child(3) img{
+                order: 2;
+            }
+
+
+            .jobspac1:nth-child(5) .jobspac11{
+                order: 1;
+            }
+
+            .jobspac1:nth-child(5) img{
+                order: 2;
+            }
+
+            .jobspac1:nth-child(4) video{
+                order: 2;
+            }
+            .jobspac1:nth-child(4) .jobspac11{
+                order: 1;
+            }
+
+
+            .jobspac1:nth-child(6) video{
+                order: 2;
+                width: 20rem;
+            }
+            .jobspac1:nth-child(6) .jobspac11{
+                order: 1;
+            }
+
+
+            .jobspac1:nth-child(7) video{
+                order: 2;
+                width: 20rem;
+            }
+            .jobspac1:nth-child(7) .jobspac11{
+                order: 1;
+            }
+        }
+
+
+    </style>
+</head>
+
+
+<body>
+
+<%- include('./partials/nav.ejs') %>
+
+<section id="carrerhome">
+
+        <div class="chome">
+            <h1>CAREERS</h1>
+            <p>Everyone carries a different vibe, but together we all look <span class="AwesomeDecoration">AWESOME</span></p>
+            <img src="./img/Different_people_1.webp" width="70%">
+            <p class="pbold">Lets come together, and form a great team with great pillers like you.</p>
+            <p>You can choose for the role that best suits you and start to grow with us because growth when takes place with your type of union is far more than alone. </p>
+            <hr style="visibility: hidden; width:20%; height: 5px; text-align:left;margin-left:0; background-color:yellow;">
+        </div>
+    </section>
+    <section id="ctext">
+        <div class="ctext">
+            <h1>We Look For</h1>
+            <div class="ctext1">
+                <div class="ctext11">
+                    <img src="./img/inn%20srv%201.webp">
+                    <h2>Innovation</h2>
+                    <p>Staying ahead of the curve and delivering cutting-edge solutions.</p>
+                </div>
+                <div class="ctext12">
+                    <img src="./img/colsrv%201.webp">
+                    <h2>Collaboration</h2>
+                    <p>Working together as a team to achieve shared goals.</p>
+                </div>
+                <div class="ctext13">
+                    <img src="./img/intsrv_1-removebg-preview.webp">
+                    <h2>Integrity</h2>
+                    <p>Operating with honesty and transparency in all business dealings.</p>
+                </div>
+                <div class="ctext14">
+                    <img src="./img/resrv-1.webp">
+                    <h2>Result-Driven</h2>
+                    <p>Focusing on delivering measurable results for clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<section class="HireBannerN">
+    <div class="HireTextContent">
+        <div class="headHire">
+            <h1>We are Hiring</h1>
+            <div class="flowerpotdiv"> <img src="./img/flowerpot 1.png"/> </div>
+        </div>
+
+        <h2>Switch your career with surgeped</h2>
+        <h2>Be a part of a rewarding career</h2>
+    </div>
+
+    <div class="HireImg">
+        <!-- <img src="./img/6.png">-->
+         <video class="videoIndex2" autoplay loop muted plays-inline>
+             <source src="./vds/Final_hiring_3.mp4" type="video/mp4" />
+         </video>
+     </div>
+ </section>
+
+
+ <section id="job">
+     <div class="job">
+         <div class="selectjob" style="display: none">
+             <input type="checkbox" id="switch" class="checkbox" />
+             <label for="switch" class="toggle">
+
+
+                 <p class=jobp>Full Time Internship</p>
+
+
+             </label>
+         </div>
+
+         <div class="labelinternandfull">
+             <h2>Full Time & Internships</h2>
+         </div>
+
+         <div class="jobspac">
+             <div class="jobhori">
+                 <div class="jobspac1">
+                     <!--<img src="./img/web-development-isometric-concept-infographics-composition-with-platforms-text-captions-people-characters-icons-screens-illustration_1284-60242%201.png"
+                         width="80%" height="80%">-->
+                        <video id="" preload="auto" playsinline height="100%" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jp">
+                            <source src="./vds/web.mp4" type="video/mp4">
+                        </video>
+                        <div class="jobspac11">
+                            <p class="jobspacp">Full Stack Developer</p>
+                            <p>Good at web development. Whether front end or backend. <br>here’s the perfect place for
+                                you.<br><br>
+
+                            <div class="ReqOnlyDesk">
+                                <p class="requirementbold1">Here are our requirements:</p><br>
+                                ●	Skilled in web languages such as HTML, CSS, JavaScript.<br>
+                                ●	Optoional: Node Js, express, React, django, php, figma ,<br> etc </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="jobspac1">
+                       <div class="jobspac11">
+                            <p class="jobspacp">Content Writer</p>
+                            <p>If you have a passion for crafting compelling stories,  <br>we're looking for a Content Writer to join our team.<br><br>
+
+                           <div class="ReqOnlyDesk">
+                               <p class="requirementbold1">Here are our requirements:</p><br>
+                               ●	Excellent written communication skills in English<br>
+                               ●	Ability to research and write about a wide range of topics<br>
+                               ●	Strong editing and proofreading skills<br>
+
+                           </div>
+
+
+                        </div>
+
+                        <!--<img class="jobimg"
+                             src="./img/copywriting-social-media-post-content-marketing-internet-commercial-cartoon-character-writing-text-advertising-promotional-strategy_335657-356%201.png">-->
+
+                        <video preload="auto"  playsinline id="" height="100%" autoplay loop muted  poster="https://assets.codepen.io/6093409/river.jp">
+                            <source src="./vds/content_writing.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                <div class="jobspac1">
+
+                    <img
+                            src="./img/business_development (1).webp" width="80%">
+
+
+
+                    <div class="jobspac11">
+                        <p class="jobspacp">Business Development Executive</p>
+                        <p>Whether you have a background in B2B sales <br>or you're looking to make a career change <br>you'll have the chance to help us grow with us.<br><br>
+
+                        <div class="ReqOnlyDesk">
+
+                            <p class="requirementbold1">Here are our requirements:</p><br>
+
+                            ●	Excellent communication and interpersonal skills<br>
+                            ●  Ability to identify and pursue new business opportunities<br>
+                            ●	Familiarity with sales tools and techniques<br>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="jobspac1">
+
+
+                    <div class="jobspac11">
+                        <p class="jobspacp">HR Trainee Executive</p>
+                        <p>If you have a passion for people and a strong understanding of HR,<br> we want you to be our next HR Executive. <br><br>
+
+                        <div class="ReqOnlyDesk">
+                            <p class="requirementbold1">Here are our requirements:</p><br>
+                            ●	Knowledge of human resources best practices and laws<br>
+                            ●	Experience in recruitment and talent management<br>
+                            ●	Excellent communication and interpersonal skills<br>
+
+                        </div>
+
+
+
+                    </div>
+                    <video preload="auto"  playsinline id=""  height="100%" autoplay loop muted  poster="https://assets.codepen.io/6093409/river.jp">
+                        <source src="./vds/hr1.mp4" type="video/mp4">
+                    </video>
+                    <!--<img
+                            src="./img/hr.png" width="70%">-->
+                </div>
+                <div class="jobspac1">
+
+                    <img
+                            src="./img/accounts.webp">
+
+                    <div class="jobspac11">
+                        <p class="jobspacp">Account Management Executive</p>
+                        <p>If you're a detail-oriented accounting professional, <br>with a strong understanding of financial principles,<br> we want you to be our next Accounts Executive.<br><br>
+                        <div class="ReqOnlyDesk">
+                            <p class="requirementbold1">Here are our requirements:</p>
+                            ●	Strong knowledge of accounting principles and practices<br>
+                            ●	Experience in accounts payable and receivable, and general ledger<br>
+                            ●	Ability to prepare financial statements and reports<br>
+                            ●	Familiarity with accounting software and tools<br>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="jobspac1">
+
+                    <div class="jobspac11">
+                        <p class="jobspacp">Social Media Trainee & Executive</p>
+                        <p>Are you a social media guru with a talent for creating engaging content<br> and building online communities?
+                            <br>If so, we want you to be our next Social Media Executive.<br><br>
+
+                        <div class="ReqOnlyDesk">
+                            <p class="requirementbold1">Here are our requirements:</p><br>
+                            ●	Strong knowledge of social media platforms and best practices<br>
+                            ●	Experience in developing and executing social media campaigns<br>
+                            ●	Excellent communication and writing skills<br>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!--<img
+                            src="./img/social media.png">-->
+
+
+                    <video id=""  preload="auto" playsinline height="100%" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jp">
+                        <source src="./vds/Social Media.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="jobspac1">
+                    <!--<img
+                        src="./img/graphic design.png" width="90%">-->
+
+                    <video id="" preload="auto" playsinline height="100%" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jp">
+                        <source src="./vds/graphic design.mp4" type="video/mp4">
+                    </video>
+
+
+                    <div class="jobspac11">
+                        <p class="jobspacp">Graphic Designer</p>
+                        <p>If you have a creative eye and a talent for visual storytelling,<br> we want you to be our next Graphic Designer. <br><br>
+
+                        <div class="ReqOnlyDesk">
+                            <p class="requirementbold1">Here are our requirements:</p><br>
+                            ●	Proficiency in graphic design software such as Adobe Creative Suite<br>
+                            ●	Strong design skills and creativity<br>
+                            ●	Ability to work with a variety of design mediums, including print and digital<br>
+                            ●	Understanding of design principles such as color theory, typography,<br>and composition<br>
+
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+<!--<div class="FormInfoCareer">
+    <h2>If you have fascination with any of the roles above,<br>Fill the form below</h2>
+    <img src="./img/arrow-down-circle-fill.svg">
+</div>-->
+
+<div class="CareerForm">
+<h1>Upload Your Resume</h1>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <label for="name">Name:</label>
+    <input type="text" name="name" required>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" name="email" required>
+    <br>
+    <label for="job">Job:</label>
+    <select name="job" required>
+        <option value="" selected disabled>Select a job</option>
+        <option value="full-stack-developer">Full Stack Developer</option>
+        <option value="content-writer">Content Writer</option>
+        <option value="business-development-executive">Business Development Executive</option>
+        <option value="hr-trainee-executive">HR Trainee Executive</option>
+        <option value="account-management-executive">Account Management Executive</option>
+        <option value="social-media-executive">Social Media Executive</option>
+        <option value="graphic-designer">Graphic Designer</option>
+    </select>
+    <br>
+    <label for="resume">Resume:</label>
+    <input type="file" name="resume" accept=".pdf,.doc,.docx" required>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+</div>
+
+
+
+
+
+<script src="./scriptmenu.js" type="text/javascript" defer></script>
+
+</body>
+
+<%- include('./partials/footer2.ejs') %>
+
+</html>

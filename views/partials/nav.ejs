@@ -1,0 +1,152 @@
+<div class="navItemsRightInBody">
+    <ul>
+        <a href="/"><li>Home</li></a>
+        <a href="service"><li>Services</li></a>
+        <a href="blogs"><li>Blogs</li></a>
+        <a href="career"><li>Careers</li></a>
+        <a href="about"><li>About Us</li></a>
+        <!--<a href="about"><li>Contact Us</li></a>-->
+    </ul>
+</div>
+
+
+
+<nav>
+    <div class="navItemsLeft">
+        <a href="/" class="logosurge"><img src="./img/logo%20(2).svg" alt="Surgeped" /></a>
+    </div>
+
+
+
+    <div class="navItemsRight">
+        <ul>
+            <a href="/"><li>Home</li></a>
+            <a href="service"><li>Services</li></a>
+            <a href="blogs"><li>Blogs</li></a>
+            <a href="career"><li>Careers</li></a>
+            <a href="about"><li>About Us</li></a>
+            <!--<a href="about"><li>Contact Us</li></a>-->
+        </ul>
+    </div>
+
+</nav>
+
+
+<div class="menu-btn2">
+    <span class="menu-btn-lineT"></span>
+    <span class="menu-btn-lineM"></span>
+    <span class="menu-btn-lineB"></span>
+</div>
+
+
+
+<script defer>
+
+    // Select the navbar element
+    const navbar = document.querySelector("nav");
+
+    // Set the threshold for when the box shadow should appear (in pixels)
+    const threshold = 704;
+
+    // Listen for scroll events
+    window.addEventListener("scroll", function() {
+        // Get the current scroll position
+        const scrollPosition = window.scrollY;
+        //console.log(scrollPosition);
+
+        // Check if the scroll position is greater than the threshold
+        if (scrollPosition > threshold) {
+            // If so, add the box shadow style to the navbar
+            navbar.style.boxShadow = "rgba(0, 0, 0, 0.24) 0px 3px 8px";
+            navbar.style.backgroundColor = "white"
+        } else {
+            // If not, remove the box shadow style
+            navbar.style.boxShadow = "none";
+            navbar.style.backgroundColor = "transparent"
+        }
+    });
+
+</script>
+
+
+<style>
+
+    nav{
+        z-index: 160;
+    }
+    .menu-btn2{
+        display: none;
+        position: fixed;
+        top: 22px;
+        right: 20px;
+        z-index: 160;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        background: none;
+        border: none;
+    }
+
+
+    .menu-btn-lineT,
+    .menu-btn-lineB,
+    .menu-btn-lineM{
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        top: 0;
+        left: 0;
+        background-color: black;
+        transition: all 0.5s;
+
+    }
+
+    .menu-btn-lineM{
+        transform: translateY(5px);
+    }
+
+    .menu-btn-lineB{
+        transform: translateY(10px);
+    }
+
+
+    .open{
+
+    }
+
+    .open .menu-btn-lineT{
+        transform: rotate(45deg) translateY(6px) translateX(6px);
+    }
+
+    .open .menu-btn-lineM{
+        display: none;
+    }
+
+    .open .menu-btn-lineB{
+        transform: rotate(-45deg) translateY(6px) translateX(-6px);
+
+    }
+
+    .navItemsRightInBody{
+        z-index: 160;
+    }
+
+
+
+
+    @media (max-width: 768px) {
+        .navItemsLeft{
+            margin-left: 1rem;
+        }
+        .navItemsLeft img{
+            width: 50%;
+        }
+        .menu-btn2{
+            display: block;
+        }
+    }
+
+
+
+
+</style>

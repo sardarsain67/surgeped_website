@@ -1,0 +1,131 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blogs</title>
+    <script src="blogs.js" type="text/javascript" defer></script>
+    <link rel="stylesheet" href="blogs.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="img/logos/asd.webp">
+
+
+</head>
+<body>
+
+
+<%- include('./partials/nav.ejs') %>
+
+
+<div id="shooting-star"></div>
+
+
+<section class="hero-blog">
+        <div class="hero-blog-content">
+            <h1>This is Surgeped blog</h1>
+            <!--<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+            <p>Welcome to our blog! Here, we aim to provide you with informative and engaging content on a variety of topics. From current events and popular culture to science and technology, we strive to keep our readers informed and entertained. Our team of writers are passionate about their respective fields and are committed to delivering quality content that is both informative and thought-provoking.Whether you are looking to learn something new, gain a fresh perspective, or simply enjoy some light reading, we hope you will find our blog to be a valuable resource.</p>
+            <button class="hero-read-more read-more-light">Read More</button>
+        </div>
+
+    </section>
+<!--
+    <section class="blog-page-categories">
+        <h2 class="heading-categories">Categories</h2>
+        <div class="category-list">
+            <div class="category-item">
+                <div><img src="./imgblogs/pexels-math-90946.jpg" alt="Product Updates" class="category-image"></div>
+
+                <h2 class="category-title">Product Updates</h2>
+            </div>
+            <div class="category-item">
+                <div><img src="./imgblogs/pexels-sebastian-arie-voortman-422290.jpg" alt="Industry Trends" class="category-image"></div>
+                <h2 class="category-title">Industry Trends</h2>
+            </div>
+            <div class="category-item">
+                <div><img src="./imgblogs/pexels-caio-46274.jpg" alt="How-to Guides and Tutorials" class="category-image"></div>
+                <h2 class="category-title">How-to Guides and Tutorials</h2>
+            </div>
+            <div class="category-item">
+                <div><img src="./imgblogs/pexels-suzy-hazelwood-1447273.jpg" alt="Case Studies and Success Stories" class="category-image"></div>
+                <h2 class="category-title">Case Studies and Success Stories</h2>
+            </div>
+            <div class="category-item">
+                <div><img src="./imgblogs/pexels-caio-46274.jpg" alt="Thought Leadership" class="category-image"></div>
+                <h2 class="category-title">Thought Leadership</h2>
+            </div>
+            <div class="category-item">
+                <div><img src="./imgblogs/pexels-caio-46274.jpg" alt="Customer Feedback and Reviews" class="category-image"></div>
+                <h2 class="category-title">Customer Feedback and Reviews</h2>
+            </div>
+            <div class="category-item">
+                <div><img src="./imgblogs/pexels-caio-46274.jpg" alt="Company News and Events" class="category-image"></div>
+                <h2 class="category-title">Company News and Events</h2>
+            </div>
+            <div class="category-item">
+                <div><img src="./imgblogs/pexels-caio-46274.jpg" alt="Career and Culture" class="category-image"></div>
+                <h2 class="category-title">Career and Culture</h2>
+            </div>
+        </div>
+        <button class="view-all-categories">View All +</button>
+    </section>
+
+
+-->
+    <section class="blog-page-blog-container">
+    <% if(blogs!='') {%>
+
+        <% blogs.forEach(blog => { %>
+            <div class="blog">
+                <a href="/blogs/<%= blog._id %>">
+                <div class="blog-cover-image" style="background-image: url('<%= blog.imagePath.replace('blogsupload\\', '') %>');">
+                    <div class="blog-overlay">
+                        <h2 class="blog-title"><%= blog.title %></h2>
+                        <div class="blog-description-div"><p class="blog-description"><%- blog.body %></p>
+                        </div>
+                        <p class="blog-date">Published at: <%= blog.date.toLocaleDateString() %></p>
+                    </div>
+                </div>
+                </a>
+            </div>
+        <% }); %>
+    <% }else{ %>
+        <!--<h1 class="coming-soon-blogs-head">Coming Soon</h1>-->
+            <div id="typing-text1"></div>
+            <script defer>
+
+                //typing simulation
+                const text = "Coming Soon...";
+                let index = 0;
+
+                function type() {
+                    const typingText = document.getElementById("typing-text1");
+                    //typingText.innerHTML = "Coming Soon" +text.slice(11, index) + "_";
+                    typingText.innerHTML = "Coming Soon" +text.slice(11, index) + "";
+
+                    index++;
+
+                    if (index > text.length) {
+                        index = 0;
+                    }
+
+                    setTimeout(type, 200);
+                }
+                type();
+            </script>
+
+
+        <% }%>
+
+
+    </section>
+
+
+
+<%- include('./partials/footer2.ejs') %>
+<script src="./scriptmenu.js" type="text/javascript" defer"></script>
+
+
+</body>
+</html>

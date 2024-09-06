@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: sans-serif;
+}
+
+div,
+section,
+span,
+ul,
+li,
+a,
+header {
+    box-sizing: border-box;
+}
+/*css reset*/
+body {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+    overflow: hidden;
+  }
+  
+  body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+  /*scroll bar hidden*/
+#carrerhome{
+    width: 100%;
+
+    padding-top: 6rem;
+
+   
+}
+.chome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+#carrerhome h1{
+    text-align: center;
+}
+
+#ctext{
+    width: 100%;
+
+    background-color: black;
+   
+}
+.ctext{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+.ctext h1{
+    color:yellow;
+    padding-top: 1rem;
+   
+}
+.ctext1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.ctext1 h2{
+    color: green;
+}
+.ctext1 p{
+    color:white;
+}
+.ctext11 img{
+height: 8rem;
+}
+.ctext12 img{
+    height: 8rem;
+}
+.ctext13 img{
+    height: 8rem;
+}
+.ctext14 img{
+    height: 8rem;
+}
+.ctext11{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+.ctext11 p{
+    color: white;
+}
+.ctext12{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+    
+   
+}
+.ctext11 p{
+    color: white;
+}
+.ctext13{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+   
+}
+.ctext11 p{
+    color: white;
+}
+.ctext14{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+   
+}
+.int{
+    width: 50%;
+    height: 50%;
+}
+#job{
+    width: 100%;
+    height: auto;
+    
+   
+}
+.job{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+   
+}
+.jobspac{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+   
+}
+.jobspacp{
+    background-color: #5CE21D;
+    font-size:large;
+    width: 80%;
+   padding: 0% 1%;
+}
+
+
+.jobspac1{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+
+   
+}
+.jobspac11{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+
+}
+.jobspac1 img{
+    width: 30%;
+
+  
+}
+
+.jobhori{
+   
+    
+    justify-content: center;
+}
+
+.jobspacp{
+    padding: .5rem .5rem;
+    border-radius: .4rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.labelinternandfull{
+    /*background-color: #fff7c4;*/
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    margin: 2rem;
+}
+
+.requirementbold1{
+    font-weight: bold;
+}
+
+
+.FormInfoCareer{
+    font-size: 1rem;
+    margin: auto;
+    color: black;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /*margin: 2rem 0;*/
+    padding: 1rem 0;
+    height: 10rem;
+}
+
+.FormInfoCareer img{
+    margin-top: 1rem;
+    width: 5rem;
+}
+
+.CareerForm{
+    background-color: #1c1c1c;
+    margin: auto;
+    width: 40%;
+    border-radius: 10px;
+    padding: 3rem 0 .5rem 0;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.CareerForm form{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 80%;
+    margin: 2rem auto;
+    text-align: left;
+    box-shadow: rgb(255 205 235 / 35%) 0px 5px 15px;}
+
+.CareerForm label{
+    display: block;
+    margin-bottom: .6rem;
+    font-weight: bold;
+
+}
+
+.CareerForm h1{
+    color: blanchedalmond;
+}
+
+.CareerForm input{
+    display: block;
+    margin-bottom: .6rem;
+    padding: .6rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #F0F0F0;
+    width: 100%;
+
+}
+
+.CareerForm select{
+    display: block;
+    margin-bottom: .6rem;
+    padding: .6rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #F0F0F0;
+    width: 100%;
+
+
+}
+
+.CareerForm input[type="submit"]{
+    background-color: #1c1c1c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 768px) {
+    .jobspac1{
+        flex-direction: column;
+    }
+    .ctext1{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: auto;
+
+
+    }
+    .jobspac11{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ReqOnlyDesk{
+        display: none;
+    }
+
+    .CareerForm{
+        width: 90%;
+    }
+}

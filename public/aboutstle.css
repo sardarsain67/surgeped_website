@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.AboutHero0{
+    background: url("./img/herobubble.png")no-repeat ;
+    background-size: 70%;
+
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.AboutHero1{
+    font-family: 'Montserrat', sans-serif;
+
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30vh;
+    padding-left: 6rem;
+    margin-bottom: 5rem;
+
+
+}
+
+.AboutHero1 h2{
+
+    font-size: 4rem;
+}
+
+.AboutHero1 p{
+
+    font-size: 1.5rem;
+    margin-top: 2rem;
+
+}
+
+.ExpertSection{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ExpertSectionText{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+    max-width: 50%;
+    margin-bottom: 10%;
+}
+
+.lineExpert2{
+    position: absolute;
+    top: -2rem;
+}
+
+.missionSection{
+    background-color: #151414;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+
+.missionSectionText{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    max-width: 50%;
+}
+
+
+.missionSectionText h2{
+    font-size: 1.5rem;
+    background-color: #FFE23E;
+    color: black;
+    max-width: 10rem;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.OurPrinciples22{
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.Principles22Container{
+    margin: auto;
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center; /* center items horizontally */
+    align-items: center;
+    gap: 2rem;
+    max-width: 80%;
+
+
+}
+
+.OurPrinciples22{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+
+.SectionHeadAbout{
+    text-align: center;
+    margin: auto;
+    background-color: #FFE23E;
+    max-width: 12rem;
+    font-size: 1rem;
+
+}
+
+.Principles22Item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+
+.Principles22Item img{
+    opacity: .72;
+    height: 4rem;
+    transition: opacity .5s;
+
+}
+
+.Principles22Item:hover img{
+    opacity: 1;
+}
+
+.Principles22Item h2{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.Principles22Item p{
+    max-width: 22rem;
+}
+
+.cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    width: 20px;
+    height: 20px;
+    background-image: url('./img/binoculars-icon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    visibility: hidden;
+    /*transition: .4s;*/
+}
+
+@media (max-width: 768px) {
+
+    .AboutHero0{
+        background-size: 160%;
+    }
+    .AboutHero1{
+        flex-direction: column;
+        padding-left: 10%;
+        padding-top: 20vh;
+    }
+    .AboutHeroImg img{
+        display: none;
+        width: 90%;
+    }
+
+
+    .ExpertSection{
+        flex-direction: column;
+    }
+    .ExpertSection div{
+    }
+    .ExpertSection .CirclePngBrand{
+
+    }
+
+    .ExpertSectionText{
+        max-width: 70%;
+    }
+
+    .missionSection{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .missionsectionItem:nth-child(1){
+        order: 2;
+    }
+
+    .missionsectionItem:nth-child(2){
+        order: 1;
+    }
+    .missionSection{
+        height: unset;
+        width: unset;
+        padding: 3rem 0;
+    }
+
+    .missionsectionItem img{
+        width: 90%;
+    }
+    .missionSectionText{
+        min-width: 70%;
+
+    }
+
+    .SecWorkAtSurgeped{
+        flex-direction: column;
+
+        gap: 2rem;
+    }
+
+    .Principles22Container{
+        grid-template-columns: 1fr;
+    }
+    .SecWhyUs{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .WhyUsText{
+        padding: unset;
+
+    }
+}
+
+
